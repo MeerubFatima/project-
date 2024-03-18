@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <style>
+body {
+    margin: 0;
+    font-family: 'poppin', sans-serif;
+    background-color: #99582a
+}
+
+header {
+    background-color: #99582a;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 2px solid #6f1d1b;
+}
+
+.logo a {
+    color: #341D11;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Blackadder ITC;
+    padding: 20% 60%;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #6f1d1b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #341D11;
+}
+.nav-links a.Shop{
+    display: inline-block;
+    color: #6f1d1b;
+    border: 4px solid;
+    transition: .4s ease-in-out;
+    border-radius: 3px;
+}
+.nav-links a:hover{
+    background-color: #bb9457;
+}
+.home-section{
+    background-image: url(home.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh-100px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: +100%;
+    transition: 1s ease-in-out;
+}
+h1{
+    color: #6f1d1b;
+    padding: 0 20px;
+}
+p{
+    color: #6f1d1b;
+    padding: 0 20px;
+    font-size: large;
+    font-weight: bold;
+}
+.home-link{
+    display: flex;
+}
+.home-link a{
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 11px 2px;
+}
+.first a{
+
+    margin: 20px;
+    background: transparent;
+    border-color: #6f1d1b;
+    color:#341D11;
+    display: inline-block;
+    border: 4px solid;
+    transition: .4s ease-in-out;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+.first a:hover{
+    background-color: #bb9457;
+}
+@media(max-width: 768px){
+    .home-section h1{
+        font-size: 3rem;
+    }
+}
+@media(max-width: 576px){
+    .home-section h1{
+        font-size: 2rem;
+    }
+    .home-section p{
+        font-size: 13px;
+    }
+    .home-section h1 br{
+        display: none;
+    }
+}
+@media(max-width: 350px){
+    .home-link{
+        flex-direction: column;
+        grid-row-gap: 15px;
+    }
+}
+.bg-services{
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-row-gap: 20px;
+    flex-wrap: wrap;
+}
+.service-one{
+    width: 32%;
+    position: relative;
+    overflow: hidden;
+}
+.service-one img{
+    width: 100%;
+    height: 300px;
+    transition: 1s ease-in-out;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.over-txt{
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+.over-txt p{
+    margin: 0;
+    text-transform: capitalize;
+}
+.over-txt h4{
+    text-transform: capitalize;
+}
+.service-one:hover img{
+    transform: scale(1.1);
+}
+@media(max-width: 991){
+    .bg-services .service-one{
+        width:49%;
+    }
+}
+@media(max-width: 576){
+    .bg-services .service-one{
+        width:100%;
+    }
+}
+.mid-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+.image-container img{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 20%;
+    margin-bottom: 50%;
+    justify-content: center;
+}
+.text-container{
+    background-color: #bb9457;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 30%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+.right{
+    float: right;
+    
+}
+.bottom-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.top-image, .bottom-image{
+    display: flex;
+    justify-content: center;
+}
+.top-images img, .bottom-images img{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 20%;
+}
+footer{
+    background-color: #757370;
+    display: cover;
+    margin: 0;
+    justify-content: center;
+}
+.foot-logo a{
+    color: #341D11;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Blackadder ITC;
+    padding: 20% 60%;
+    float: right;
+}
+.about-us{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.phone-number{
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">HeavenlyCoffee</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" class="Shop">Shop Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="home-section">
+        <div class="home-content">
+            <h1>All You Need To <br> Feel Better Is a <br>Cup of Coffee</h1>
+            <p>Affordable prices for all<br>to start your day <br>with coffee</p>
+        </div>
+        <div class="home-link">
+            <div class="first">
+                <a href="#">Order Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-services">
+        <div class="service-one">
+            <img src="coffee.jpg" alt="">
+            <div class="overlay">
+                <div class="over-txt">
+                    <p style="color:  #341D11;">For drinks</p>
+                    <h4 style="color: #fff;">Coffes & Teas</h4>
+                </div>
+            </div>
+        </div>
+        <div class="service-one">
+            <img src="sandwhich.webp" alt="">
+            <div class="overlay">
+                <div class="over-txt">
+                    <p style="color:  black;">For Appetite</p>
+                    <h4 style="color: #fff;">Sandwhiches & Snacks</h4>
+                </div>
+            </div>
+        </div>
+        <div class="service-one">
+            <img src="cake.webp" alt="">
+            <div class="overlay">
+                <div class="over-txt">
+                    <p style="color:  #fff;">For Sweet</p>
+                    <h4 style="color: burlywood;">Cakes & Pastaries</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mid-page">
+        <div class="image-container">
+            <img src="cak 1.jpg" alt="">
+            <img src="cof 1.jpg" alt="">
+            <img src="cupcake.jpg" alt="">
+            <img src="cof 2.jpg" alt="">
+        </div>
+        <div class="text-container">
+            <div class="right">
+                <p style="color:#341D11";>WITH THE PERFECT BLEND<br>OF FRESHNESS<br>EVERY MOMENT HAS ITS FLAVOUR</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-page">
+        <div class="top-images">
+            <img src="ca 1.jpg" alt="Image 1">
+            <img src="co 1.jpg" alt="Image 2">
+            <img src="bur.jpg" alt="Image 3">
+        </div>
+        <div class="bottom-images">
+            <img src="pas.jpg" alt="Image 4">
+            <img src="co 2.jpg" alt="Image 5">
+            <img src="tea 1.webp" alt="Image 6">
+            <img src="ca 2.webp" alt="Image 7">
+            <img src="tea 2.webp" alt="Image 8">
+        </div>
+        <footer>
+            <div class="foot-logo">
+                <a href="#">HeavenlyCoffee</a>
+            </div>
+            <div class="about-us">
+                <h3 style="color: #99582a;">About Us</h3>
+                <p>You really can't go wrong when you start your<br>day with delicious,fresh and healthy coffee<br>and it is even easier when you order it from a<br>website or app <span style="font-weight: bolder;">HEAVENLY COFFEE</span>is genuinely<br>interesting in quality and flavour as well as the<br>main coffees develop and created in the cities.</p>
+            </div>
+            <div class="phone-number">
+                <h3 style="color: #99582a;">Phone Number</h3>
+                <p>(123) 456-7890</p>
+            </div>
+        </footer>
+
+    <script>
+        window.onload=()=>{
+            let homeSection=document.querySelector(".home-section");
+            homeSection.style.left="50px"
+        }
+        <!-- Add this script inside the <head> section of your HTML file -->
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.getElementById("navbar");
+        const navLinks = document.querySelector(".nav-links");
+        function toggleMenu() {
+            navLinks.classList.toggle("show");
+        }
+
+        navbar.addEventListener("click", toggleMenu);
+    });
+</script>
+
+    </script>
+</body>
+</html>

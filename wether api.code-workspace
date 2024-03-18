@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../wether api"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project website"
+	}
+}
